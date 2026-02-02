@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queue Tracker - User</title>
+  <link rel="stylesheet" href="user-dashboard.css" />
+</head>
+<body>
+
+<div class="card">
+  <h2>Join Queue</h2>
+
+  <!-- Join Queue Section -->
+  <div id="joinSection">
+    <input type="text" id="shopIdInput" placeholder="Enter Shop/Admin Unique ID" />
+    <button onclick="joinQueue()">Generate Token</button>
+  </div>
+
+  <!-- Queue Status Section -->
+  <div id="statusSection" class="hidden">
+    <div class="info">
+      <p><strong>Your Token:</strong> <span id="tokenNumber"></span></p>
+      <p><strong>People Before You:</strong> <span id="peopleBefore"></span></p>
+      <p><strong>Total People in Queue:</strong> <span id="totalPeople"></span></p>
+    </div>
+
+    <button class="danger" onclick="cancelQueue()">Cancel & Exit Queue</button>
+  </div>
+</div>
+
+<script src="user-dashboard.js"></script>
+
+</body>
+</html>
